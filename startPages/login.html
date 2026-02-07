@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Система управления библиотекой">
+    <meta name="keywords" content="библиотека, книги, читатели">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library - Вход</title>
+    <link rel="stylesheet" href="../css/startPage.css">
+</head>
+<body class="page">
+<div class="page__container">
+    <div class="page__left-panel"></div>
+    <div class="page__right-panel">
+        <h1 class="page__title">Library</h1>
+        <nav class="nav">
+            <ul class="nav__list">
+                <li class="nav__item"><a href="login.html" class="nav__link">Вход</a></li>
+                <li class="nav__item"><a href="signup.html" class="nav__link">Регистрация</a></li>
+            </ul>
+        </nav>
+        <form id="loginForm" class="form" action="#" method="post">
+            <label class="form__label">
+                <input class="form__input" id="login" placeholder="Логин">
+                <input class="form__input" id="password" type="password" placeholder="Пароль">
+            </label>
+            <button class="form__button" type="submit">Войти</button>
+        </form>
+        <footer class="footer">
+            <p class="footer__text">&copy; 2024 Library System</p>
+            <p class="footer__load-time" id="load-time"></p>
+        </footer>
+    </div>
+</div>
+
+<script>
+    (function() {
+        window.addEventListener('load', function() {
+            var loadTime = window.performance.timing.domContentLoadedEventEnd - window.performance.timing.navigationStart;
+            var loadTimeSec = (loadTime / 1000).toFixed(2);
+
+            var loadTimeElement = document.getElementById('load-time');
+            loadTimeElement.innerText = 'Время загрузки страницы: ' + loadTimeSec + ' секунд.';
+        });
+    })();
+</script>
+<script src="../js/login.js"></script>
+</body>
+</html>

@@ -1,0 +1,117 @@
+@import "main.css";
+
+.page {
+    background-color: #E6FDFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.page__container {
+    width: 90%;
+    height: 90%;
+    max-width: 1600px;
+    background-color: #E6FDFF;
+    display: flex;
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    position: relative;
+}
+
+.page__left-panel {
+    width: 60%;
+    background-image: url('../img/orn.svg');
+    background-size: cover;
+    background-position: center;
+}
+
+.page__right-panel {
+    width: 40%;
+    padding: 80px 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.page__title {
+    font-size: 102px;
+    font-weight: bold;
+    color: #121A35;
+    margin-bottom: 40px;
+    font-family: 'Library', serif;
+}
+
+.nav {
+    margin-bottom: 40px;
+}
+
+.nav__list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    font-size: 22px;
+}
+
+.nav__item {
+    margin-right: 30px;
+}
+
+.nav__link {
+    text-decoration: none;
+    color: #121A35;
+    font-weight: bold;
+}
+
+.nav__link:hover {
+    text-decoration: underline;
+}
+
+.form__label {
+    display: block;
+    width: 100%;
+}
+
+.form__input {
+    width: 80%;
+    padding: 18px;
+    margin-bottom: 25px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-size: 18px;
+    transition: border 150ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form__input:hover {
+    border: 1px solid #4A9DEC;
+    box-shadow: 0 0 4px 6px rgba(74, 157, 236, 0.2);
+    background-color: white;
+}
+
+.form__button {
+    width: 80%;
+    padding: 18px;
+    background-color: #121A35;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.form__button:hover {
+    background-color: #3C4A63;
+}
+
+.footer {
+    margin-top: 20px;
+}
+
+.footer__text, .footer__load-time {
+    color: #7f8c8d;
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Список дел</title>
+    <link rel="stylesheet" href="../css/basePage.css">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body class="page">
+<div class="page__container">
+    <aside class="sidebar">
+        <div class="sidebar__header">
+            <h2 class="sidebar__title">Меню</h2>
+        </div>
+        <ul class="menu">
+            <li class="menu__item"><a href="fondBook.html" class="menu__link" id="menu-all-books">Фонд книг</a></li>
+            <li class="menu__item"><a href="booking.html" class="menu__link" id="menu-my-bookings">Мои бронирования</a></li>
+            <li class="menu__item"><a href="history.html" class="menu__link" id="menu-history">История</a></li>
+            <li class="menu__item"><a href="constructor.html" class="menu__link" id="menu-constructor">Конструктор</a></li>
+            <li class="menu__item"><a href="todo.html" class="menu__link" id="menu-todo">Список дел</a></li>
+        </ul>
+        <div class="profile">
+            <a href="profile.html" class="profile__link">Профиль</a>
+        </div>
+    </aside>
+
+    <main class="content">
+        <h1 class="content__title">Список дел</h1>
+        <form id="todoForm" class="form">
+            <label for="todoInput" class="form__label">Новая задача</label>
+            <input type="text" id="todoInput" class="form__input" placeholder="Введите задачу" required>
+            <button type="submit" class="form__button">Добавить</button>
+        </form>
+
+        <ul id="todoList" class="todo-list"></ul>
+    </main>
+</div>
+
+<footer class="footer">
+    <p class="footer__text">&copy; 2024 My System :(</p>
+</footer>
+
+<script src="../js/todo.js"></script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Страница с историей бронирования">
+    <meta name="keywords" content="библиотека, книги, история">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library - История</title>
+    <link rel="stylesheet" href="../css/basePage.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body class="page">
+<div class="page__container">
+    <aside class="sidebar">
+        <div class="sidebar__header">
+            <h2 class="sidebar__title">Меню</h2>
+        </div>
+        <ul class="menu">
+            <li class="menu__item"><a href="fondBook.html" class="menu__link" id="menu-all-books">Фонд книг</a></li>
+            <li class="menu__item"><a href="booking.html" class="menu__link" id="menu-my-bookings">Мои бронирования</a></li>
+            <li class="menu__item"><a href="history.html" class="menu__link" id="menu-history">История</a></li>
+            <li class="menu__item"><a href="constructor.html" class="menu__link" id="menu-constructor">Конструктор</a></li>
+            <li class="menu__item"><a href="todo.html" class="menu__link" id="menu-todo">Список дел</a></li>
+        </ul>
+        <div class="profile">
+            <a href="../404.html" class="profile__link" id="menu-profile">Профиль</a>
+        </div>
+    </aside>
+
+    <main class="content">
+        <header class="content__header">
+            <div class="image-container">
+                <img src="../img/orn.svg" alt="Описание изображения" class="image-container__book-image">
+                <h1 class="image-container__overlay-text">История</h1>
+            </div>
+        </header>
+
+        <section class="ascii-art">
+                <pre style="font-family: 'Consolas', 'Courier New', Courier, monospace; font-size: 20px; line-height: 1.2;">
+
+.-.   .-..----. .----.   .--.  .----..-.  .-.
+| |   | || {}  }| {}  } / {} \ | {}  }\ \/ /
+| `--.| || {}  }| .-. \/  /\  \| .-. \ }  {
+`----'`-'`----' `-' `-'`-'  `-'`-' `-' `--'
+                </pre>
+        </section>
+
+        <section class="code-snippet">
+            <h2>Пример кода на JavaScript:</h2>
+            <pre><code>
+// Функция для вывода приветствия
+function sayHello() {
+    console.log("Hello, World!");
+}
+
+sayHello();
+                </code></pre>
+        </section>
+
+        <section class="quote-and-formula">
+            <blockquote>
+                "Все может быть и все быть может, и все, что может может быть,
+                но одного лишь быть не может, того чего не может быть "
+            </blockquote>
+            <p>
+                Формула:<br>
+                E = mc<sup>2</sup>
+            </p>
+        </section>
+    </main>
+</div>
+
+<footer class="footer">
+    <p class="footer__text">&copy; 2024 Library System</p>
+    <p class="footer__load-time" id="load-time"></p>
+</footer>
+
+<script src="../js/menu.js"></script>
+<script>
+    (function() {
+        window.addEventListener('load', function() {
+            var loadTime = window.performance.timing.domContentLoadedEventEnd - window.performance.timing.navigationStart;
+            var loadTimeSec = (loadTime / 1000).toFixed(2);
+
+            var loadTimeElement = document.getElementById('load-time');
+            loadTimeElement.innerText = 'Время загрузки страницы: ' + loadTimeSec + ' секунд.';
+        });
+    })();
+</script>
+</body>
+</html>

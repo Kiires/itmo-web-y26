@@ -1,0 +1,50 @@
+.booking-table {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    margin-top: 40px;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+.table-header {
+    background-color: #121a35;
+    color: white;
+    font-weight: bold;
+    padding: 16px;
+    text-align: left;
+    border-bottom: 2px solid #e2e2e2;
+}
+
+.table-row {
+    display: contents;
+}
+
+.table-cell {
+    padding: 16px;
+    text-align: left;
+    background-color: #a0d7ff;
+    border-bottom: 1px solid #e2e2e2;
+}
+
+.table-row:nth-child(even) .table-cell {
+    background-color: #FFFFFF;
+}
+
+.table-row:hover .table-cell {
+    outline: none;
+    border: 1px;
+    box-shadow: none;
+}
+
+@media (max-width: 768px) {
+    .booking-table {
+        grid-template-columns: 1fr;
+    }
+
+    .table-header, .table-cell {
+        padding: 12px;
+    }
+}
